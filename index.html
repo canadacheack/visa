@@ -1,0 +1,115 @@
+c<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+</head>
+
+<body oncontextmenu="return false;">
+    <div class="container">
+        <div class="form">
+            <div class="form_container">
+
+                <h1>Canada Application Checker</h1>
+                <input type="text" id="passport" placeholder="Enter your Passport">
+                <button id="click" onclick="redirect()">Search</button>
+
+        </div>
+        </div>
+    </div>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: url(img/mAP.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .form {
+            background: #fff;
+            padding: 30px;
+            text-align: center;
+            min-height: 187px;
+            box-shadow: 1px -1px 20px white;
+        }        
+        input {
+            display: block;
+            margin: 16px;
+            padding: 12px;
+            font-family: arial;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            width: 90%;
+            background: #ddd;
+            border-radius: 7px;
+        }        
+        h1 {
+            text-align: center;
+            color: black;
+            font-family: arial;
+            font-size: 30px;
+        }
+        button {
+            cursor: pointer;
+            background: #c90c0c;
+            color: white;
+            display: block;
+            margin: 16px;
+            padding: 12px;
+            font-family: arial;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            width: 90%;
+            border-radius: 6px;
+        }
+
+    </style>
+    <script> 
+
+        function redirect(){
+         var test =  document.querySelector('#passport');
+         if(test.value == "EK0187677"){
+                 window.location.href= "ramjan.html"; 
+         }else if (test.value == "EH0215336") {
+            window.location.href= "bulbul.html"; 
+         }else if (test.value == "A12360192"){
+             window.location.href = "simon.html"
+         }
+            
+            
+             
+         else{
+              alert("invalid Passport")
+         }
+           }
+        document.onkeydown = function(e) {
+if(event.keyCode == 123) {
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+return false;
+}
+}        
+    </script>
+
+</body>
+</html>
